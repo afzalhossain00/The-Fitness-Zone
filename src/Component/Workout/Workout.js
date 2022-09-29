@@ -7,6 +7,14 @@ const Workout = (props) => {
     return (
         <div className='workout'>
             <img src={picture} alt="" />
+            <div className='workout-info'>
+                <p className='workout-name'>{name}</p>
+                <p>For Age: {age}</p>
+                <p>Time Required: {time}s</p>
+            </div>
+            <button className='btn-add'>
+                <p>Add to list</p>
+            </button>
         </div>
     );
 };
