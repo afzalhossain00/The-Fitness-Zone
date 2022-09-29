@@ -3,3 +3,68 @@
     top: 0;
     padding: 30px 20px;
 }
+
+.profile {
+    text-align: center;
+    background-color: rgba(253, 176, 60, 0.332);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn-container {
+    background-color: rgba(253, 176, 60, 0.332);
+    /* margin: 20px 35px; */
+    padding: 40px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 12px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+.exercise-time {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background-color: rgba(253, 176, 60, 0.332);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.break-time {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-top: 15px;
+    background-color: rgba(253, 176, 60, 0.332);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* .btn-container {
+    text-align: center;
+} */
+
+.btn-activity {
+    width: 80%;
+    margin-top: 15px;
+    background-color: rgba(243, 69, 5, 0.952);
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-activity p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
