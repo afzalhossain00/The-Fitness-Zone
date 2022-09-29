@@ -5,6 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = ({ sidebar }) => {
+    const breakTime = localStorage.getItem('breakTime');
+    const [getValue, setGetValue] = useState(breakTime)
 
     let total = 0;
     for (const workout of sidebar) {
@@ -12,6 +14,11 @@ const Sidebar = ({ sidebar }) => {
     }
 
     const notify = () => toast("You have done your daily workout!");
+
+    const btnValue = (e) => {
+        setGetValue(e.target.value);
+        localStorage.setItem("breakTime", e.target.value);
+    }
 
     return (
         <div className='sidebar'>
@@ -23,10 +30,10 @@ const Sidebar = ({ sidebar }) => {
                 <h3>Add A Break</h3>
             </div>
             <div className='btn-container'>
-                <button className='btn'>10s</button>
-                <button className='btn'>20s</button>
-                <button className='btn'>30s</button>
-                <button className='btn'>40s</button>
+                <button onClick={btnValue} value="10" className='btn'>10s</button>
+                <button onClick={btnValue} value="20" className='btn'>20s</button>
+                <button onClick={btnValue} value="30" className='btn'>30s</button>
+                <button onClick={btnValue} value="40" className='btn'>40s</button>
             </div>
             <div>
                 <h3>Exercise Details</h3>
@@ -36,7 +43,7 @@ const Sidebar = ({ sidebar }) => {
                 </div>
                 <div className='break-time'>
                     <p>Break Time: </p>
-                    <p>{ } Seconds</p>
+                    <p>{getValue} Seconds</p>
                 </div>
             </div>
             <div>
