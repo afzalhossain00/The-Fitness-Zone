@@ -33,7 +33,6 @@ const Activity = () => {
                     ></Workout>)
                 }
             </div>
-
             <div className="sidebar-container">
                 <Sidebar sidebar={sidebar}></Sidebar>
             </div>

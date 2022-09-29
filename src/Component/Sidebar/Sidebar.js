@@ -1,5 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
 import './Sidebar.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = ({ sidebar }) => {
 
@@ -7,6 +10,8 @@ const Sidebar = ({ sidebar }) => {
     for (const workout of sidebar) {
         total = total + workout.time;
     }
+
+    const notify = () => toast("You have done your daily workout!");
 
     return (
         <div className='sidebar'>
@@ -35,8 +40,9 @@ const Sidebar = ({ sidebar }) => {
                 </div>
             </div>
             <div>
-                <button className='btn-activity'>
+                <button onClick={notify} className='btn-activity'>
                     <p>Activity Completed</p>
+                    <ToastContainer />
                 </button>
             </div>
         </div>
