@@ -30,6 +30,7 @@
 
 .btn:hover {
     background-color: orange;
+
 }
 
 .exercise-time {
@@ -51,10 +52,6 @@
     text-align: center;
 }
 
-/* .btn-container {
-    text-align: center;
-} */
-
 .btn-activity {
     width: 80%;
     margin-top: 15px;
@@ -66,5 +63,9 @@
 .btn-activity p {
     color: white;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.btn-activity:hover {
+    background-color: orange;
 }

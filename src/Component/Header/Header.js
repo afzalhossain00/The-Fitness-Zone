@@ -11,12 +11,6 @@ const Header = () => {
                     <FontAwesomeIcon className='icon' icon={faDumbbell}></FontAwesomeIcon>
                     <h1>The Fitness Zone</h1>
                 </div>
-                <div>
-                    <a href="/home">Home</a>
-                    <a href="/Workout plan">Workout Plan</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                </div>
             </nav>
         </div>
     );

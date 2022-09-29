@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Workout from '../Workout/Workout';
 import Sidebar from '../Sidebar/Sidebar';
+import '../QuestionAndAnswer/QuestionAndAnswer.css'
 
 const Activity = () => {
     const [workouts, setWorkouts] = useState([]);
