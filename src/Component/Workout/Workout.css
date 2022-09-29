@@ -4,6 +4,7 @@
     border: 1px solid lightgray;
     border-radius: 8px;
     text-align: center;
+    background-color: rgba(253, 176, 60, 0.332);
 }
 
 .workout img {

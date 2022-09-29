@@ -7,4 +7,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    margin: 80px 50px;
+}
+
+.sidebar-container {
+    background-color: rgba(253, 176, 60, 0.332);
 }

@@ -3,9 +3,11 @@ import './Activity.css'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Workout from '../Workout/Workout';
+import Sidebar from '../Sidebar/Sidebar';
 
 const Activity = () => {
     const [workouts, setWorkouts] = useState([]);
+    const [sidebar, setSidebar] = useState([]);
 
     useEffect(() => {
         fetch('activity.json')
@@ -13,6 +15,11 @@ const Activity = () => {
             .then(data => setWorkouts(data))
     }, [])
 
+    const handleAddToList = (workout) => {
+        console.log(workout);
+        const newSidebar = [...sidebar, workout];
+        setSidebar(newSidebar)
+    }
 
     return (
         <div className='activity-container'>
@@ -21,12 +28,13 @@ const Activity = () => {
                     workouts.map(workout => <Workout
                         key={workout.id}
                         workout={workout}
+                        handleAddToList={handleAddToList}
                     ></Workout>)
                 }
             </div>
 
-            <div className="activity-log">
-                <h2>Afzal Hossain</h2>
+            <div className="sidebar-container">
+                <Sidebar sidebar={sidebar}></Sidebar>
             </div>
         </div>
     );
